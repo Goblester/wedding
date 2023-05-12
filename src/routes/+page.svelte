@@ -2,10 +2,12 @@
     import Header from "../components/header/Header.svelte";
     import Main from "../components/main/Main.svelte";
     import Invitation from "../components/invitation/Invitation.svelte";
+    import CountDown from "../components/countDown/CountDown.svelte";
 </script>
 <Header/>
 <Main/>
 <Invitation/>
+<CountDown />
 
 
 <style>
