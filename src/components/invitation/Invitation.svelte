@@ -6,25 +6,32 @@
     <p class="invText">We invite you to celebrate our wedding</p>
     <div class="couple">
         <div class="left">
-            <p>Даниил</p>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Ut enim ad minim veniam
-            </p>
+            <div class="leftText">
+                <p class="name">Даниил</p>
+                <p class="description">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                    et
+                    dolore magna aliqua. Ut enim ad minim veniam
+                </p>
+            </div>
             <div class="imgContainer">
                 <img src="src/assets/daniil.jpg" alt="daniil" class="image"/>
             </div>
         </div>
-        <Heart/>
+        <div class="heart" >
+            <Heart />
+        </div>
         <div class="right">
-            <p>Оля</p>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Ut enim ad minim veniam
-            </p>
-            <div class="imgContainer">
-                <img src="src/assets/olya.jpg" alt="olga" class="image"/>
+            <div class="rightText">
+                <p class="name">Оля</p>
+                <p class="description">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                    et
+                    dolore magna aliqua. Ut enim ad minim veniam
+                </p>
             </div>
+
+            <img src="src/assets/olya.jpg" alt="olga" class="image"/>
         </div>
     </div>
 </section>
@@ -37,6 +44,8 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        max-width: 1140px;
+        margin: 0 auto;
     }
 
     h2 {
@@ -69,12 +78,62 @@
         flex-direction: row-reverse;
     }
 
-    .imgContainer {
+    .leftText {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        margin-right: 25px;
+        text-align: right;
+    }
 
+    .rightText {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-left: 25px;
     }
 
     .image {
         height: 150px;
         width: 150px;
+        border-radius: 50%;
     }
+
+    .name {
+        margin-bottom: 20px;
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 1.2;
+    }
+
+    .description {
+        font-size: 16px;
+        margin-top: 0;
+        margin-bottom: 1rem;
+        width: 336px;
+        font-weight: 300;
+        line-height: 1.7;
+    }
+
+    .heart {
+        padding: 0 20px;
+        height: 20px;
+        margin-top: 65px;
+        animation: pulse 1s ease infinite;
+    }
+
+    @keyframes pulse {
+        from {
+            transform: scale(1);
+        }
+
+        50% {
+            transform: scale(1.3);
+        }
+
+        to {
+            transform: scale(1);
+        }
+    }
+
 </style>
