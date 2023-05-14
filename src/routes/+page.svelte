@@ -17,4 +17,13 @@
         box-sizing: border-box;
         font-family: Roboto, Arial, sans-serif;
     }
+
+    :global(body) {
+        font-family: "Open Sans", sans-serif;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 1.7;
+        color: #000;
+        background: #fff;
+    }
 </style>

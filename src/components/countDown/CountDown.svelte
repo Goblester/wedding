@@ -31,20 +31,25 @@
         wedding website!</p>
     <div class="bottomContainer">
         <span class="sideText">Just some hours...</span>
-        <span class="dateItem">{days < 10 ? `0${days}` : days}
-            DAYS</span>
-        <span class="dateItem">{hours < 10 ? `0${hours}` : hours}
-            HOURS
-        </span>
-        <span class="dateItem">
-            {minutes < 10 ? `0${minutes}` : minutes}
-            MINUTES
-        </span>
 
-        <span class="dateItem">
-            {seconds < 10 ? `0${seconds}` : seconds}
-            SECONDS
-        </span>
+        <div class="timerContainer">
+            <div class="dateItem">
+                <span class="dateValue">{days < 10 ? `0${days}` : days}</span>
+                <span class="dateName">DAYS</span>
+            </div>
+            <div class="dateItem">
+                <span class="dateValue">{hours < 10 ? `0${hours}` : hours}</span>
+                <span class="dateName">HOURS</span>
+            </div>
+            <div class="dateItem">
+                <span class="dateValue">{minutes < 10 ? `0${minutes}` : minutes}</span>
+                <span class="dateName">MINUTES</span>
+            </div>
+            <div class="dateItem">
+                <span class="dateValue">{seconds < 10 ? `0${seconds}` : seconds}</span>
+                <span class="dateName">SECONDS</span>
+            </div>
+        </div>
         <span class="sideText">...until we get married!</span>
     </div>
 </section>
@@ -95,8 +100,26 @@
         font-size: 34px;
     }
 
+    .timerContainer {
+        display: flex;
+    }
+
     .dateItem {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100px;
+        height: 100px;
+    }
+
+    .dateValue {
         font-size: 47px;
         line-height: 40px;
+    }
+
+    .dateName {
+        font-size: 14px;
+        opacity: .7;
     }
 </style>
