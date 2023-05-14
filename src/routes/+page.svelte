@@ -3,11 +3,13 @@
     import Main from "../components/main/Main.svelte";
     import Invitation from "../components/invitation/Invitation.svelte";
     import CountDown from "../components/countDown/CountDown.svelte";
+    import WeddingEvents from "../components/weddingEvents/WeddingEvents.svelte";
 </script>
 <Header/>
 <Main/>
 <Invitation/>
 <CountDown />
+<WeddingEvents />
 
 
 <style>
@@ -25,5 +27,17 @@
         line-height: 1.7;
         color: #000;
         background: #fff;
+    }
+
+    :global(h2) {
+        margin-bottom: 10px;
+        line-height: 1.5;
+        font-family: cursive;
+        font-size: 50px;
+        color: #000;
+    }
+
+    :global(button) {
+        cursor: pointer;
     }
 </style>

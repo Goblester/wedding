@@ -1,8 +1,8 @@
 <script lang="ts">
-    import Heart from "../icons/Heart.svelte";
+    import Heart from "../icons/HeartIcon.svelte";
 </script>
 <section class="container">
-    <h2>Hello</h2>
+    <h2>Hello!</h2>
     <p class="invText">We invite you to celebrate our wedding</p>
     <div class="couple">
         <div class="left">
@@ -46,14 +46,6 @@
         align-items: center;
         max-width: 1140px;
         margin: 0 auto;
-    }
-
-    h2 {
-        margin-bottom: 10px;
-        line-height: 1.5;
-        font-family: "Great Vibes", cursive;
-        font-size: 50px;
-        color: #000;
     }
 
     .invText {

@@ -1,5 +1,5 @@
 <main class="container">
-    <div class="textContainer">
+    <div class="rightContainer">
         <h1>Save the date</h1>
         <div class="info">
             <span class="place">Вологда<br/>Россия</span>
@@ -19,7 +19,7 @@
         justify-content: center;
     }
 
-    .textContainer {
+    .rightContainer {
         display: flex;
         flex-direction: column;
         justify-content: center;

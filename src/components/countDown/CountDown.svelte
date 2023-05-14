@@ -68,13 +68,6 @@
         color: white;
     }
 
-    h2 {
-        font-size: 50px;
-        margin-bottom: 10px;
-        line-height: 1.5;
-        font-family: "Great Vibes", cursive;
-    }
-
     .excitedText {
         width: 75%;
         margin-left: auto;
