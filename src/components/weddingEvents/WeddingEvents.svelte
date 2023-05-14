@@ -2,8 +2,19 @@
     import {ACCORDION_IMAGES} from "../../contants";
     import LocationIcon from "../icons/LocationIcon.svelte";
     import {ACCORDION_DATA} from "../../contants";
+    import {slide} from "svelte/transition";
+    import {cubicInOut} from 'svelte/easing';
 
     let currentIndex = 0;
+
+    const scrolling = (
+        _,
+        {duration, move},
+    ) => ({
+        duration,
+        css: (t: number) =>
+            `transform: translateY(${move === 'out' ? '-' : ''}${100 - cubicInOut(t) * 100}%);`,
+    });
 
 </script>
 
@@ -14,19 +25,32 @@
         et dolore magna aliqua. Ut enim ad minim veniam</p>
     <div class="accordionPanel">
         <div class="imgContainer">
-            <img class="accImage" src={ACCORDION_IMAGES[currentIndex]} alt="wedding event"/>
+        {#each ACCORDION_IMAGES as image, index}
+                {#if index === currentIndex}
+                    <img class="accImage"
+                         in:scrolling={{duration: 300, move: 'in'}}
+                         out:scrolling={{duration: 300, move: 'out'}}
+                         src={image}
+                         alt="wedding event" />
+                {/if}
+        {/each}
         </div>
         <div class="rightContainer">
             <h3>4 Августа, 2023 Вологда, Россия</h3>
             <div class="textContainer">
-
-            {#each ACCORDION_DATA as accItem}
-                <div class="textItemContainer">
-                    <button type="button">{accItem.time}</button>
-                    <span class="location"><LocationIcon/>{accItem.location}</span>
-                    <p class="eventDesc">{accItem.description}</p>
-                </div>
-            {/each}
+                {#each ACCORDION_DATA as accItem, index}
+                    <div class="textItemContainer">
+                        <button type="button" on:click={() =>{
+                            currentIndex = index;
+                        }}>{accItem.time}</button>
+                        {#if currentIndex === index}
+                            <div class="accordion" transition:slide={{duration: 300}}>
+                                <span class="location"><LocationIcon/>{accItem.location}</span>
+                                <p class="eventDesc">{accItem.description}</p>
+                            </div>
+                        {/if}
+                    </div>
+                {/each}
             </div>
         </div>
     </div>
@@ -68,13 +92,16 @@
     .imgContainer {
         position: relative;
         width: 50%;
-        height: auto;
         overflow: hidden;
+        height: 600px;
     }
 
     .accImage {
         width: 100%;
-        height: auto;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
     }
 
     .rightContainer {
@@ -105,6 +132,7 @@
         color: #000;
         font-weight: 600;
         font-size: 16px;
+        margin-top: 5px;
     }
 
     .eventDesc {
@@ -121,6 +149,11 @@
         padding: 5px 15px 0;
         line-height: 2;
         font-size: 16px;
+    }
+
+    .accordion {
+        display: flex;
+        flex-direction: column;
     }
 
 </style>
