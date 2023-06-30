@@ -4,13 +4,14 @@
     import Invitation from "../components/invitation/Invitation.svelte";
     import CountDown from "../components/countDown/CountDown.svelte";
     import WeddingEvents from "../components/weddingEvents/WeddingEvents.svelte";
+    import OurGallery from "../components/ourGallery/OurGallery.svelte";
 </script>
 <Header/>
 <Main/>
 <Invitation/>
 <CountDown />
 <WeddingEvents />
-
+<OurGallery />
 
 <style>
     :global(*) {
