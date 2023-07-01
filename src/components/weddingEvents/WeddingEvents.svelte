@@ -1,4 +1,4 @@
-<script lang="ts">
+<script>
     import {ACCORDION_IMAGES} from "../../constants";
     import LocationIcon from "../icons/LocationIcon.svelte";
     import {ACCORDION_DATA} from "../../constants";
@@ -12,7 +12,7 @@
         {duration, move},
     ) => ({
         duration,
-        css: (t: number) =>
+        css: (t) =>
             `transform: translateY(${move === 'out' ? '-' : ''}${100 - cubicInOut(t) * 100}%);`,
     });
 
@@ -28,8 +28,8 @@
         {#each ACCORDION_IMAGES as image, index}
                 {#if index === currentIndex}
                     <img class="accImage"
-                         in:scrolling={{duration: 300, move: 'in'}}
-                         out:scrolling={{duration: 300, move: 'out'}}
+                         in:scrolling|global={{duration: 300, move: 'in'}}
+                         out:scrolling|global={{duration: 300, move: 'out'}}
                          src={image}
                          alt="wedding event" />
                 {/if}
@@ -44,7 +44,7 @@
                             currentIndex = index;
                         }}>{accItem.time}</button>
                         {#if currentIndex === index}
-                            <div class="accordion" transition:slide={{duration: 300}}>
+                            <div class="accordion" transition:slide|global={{duration: 300}}>
                                 <span class="location"><LocationIcon/>{accItem.location}</span>
                                 <p class="eventDesc">{accItem.description}</p>
                             </div>
