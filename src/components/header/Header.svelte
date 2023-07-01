@@ -1,7 +1,7 @@
-<script lang="ts">
+<script>
 
-    import {NAV_LINKS} from "../../constants/index.js";
-    import {currentSection} from "../../store/currentSection/index.js";
+    import {NAV_LINKS} from "../../constants";
+    import {currentSection} from "../../store/currentSection";
 
     let y;
     $: fixed = y > 56;
@@ -33,6 +33,8 @@
         align-items: center;
         z-index: 1;
         color: white;
+        background-color: transparent;
+        transition: all .1s;
     }
 
 
