@@ -1,13 +1,12 @@
 <header class="header">
     <div class="logo"></div>
     <nav>
-        <ul class="links">
-            <li>Home</li>
-            <li>Events</li>
-            <li>Story</li>
-            <li>Gallery</li>
-            <li>Contact</li>
-        </ul>
+        <div class="links">
+            <a href="home">Главная</a>
+            <a href="events">События</a>
+            <a href="Gallery">Галлерея</a>
+            <a href="Contacts">Контакты</a>
+        </div>
     </nav>
 </header>
 
@@ -18,10 +17,10 @@
         width: 100%;
         height: 56px;
         padding: 8px 0;
-        background-color: gold;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        z-index: 1;
     }
 
     .logo {
@@ -34,11 +33,12 @@
         display: flex;
     }
 
-    .links li {
+    .links a {
         list-style: none;
         padding: 8px 16px;
         font-size: 16px;
         color: #ffffff;
         font-weight: 300;
+        text-decoration: none;
     }
 </style>
