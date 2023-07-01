@@ -4,16 +4,16 @@
     import mainImg from './../../assets/main.jpg';
 </script>
 
-<section class="container">
+<section  id="main" class="container" data-section="true">
     <Parallax sections={3} config={{stiffness: 0.2, damping: 0.3}}>
         <ParallaxLayer rate={0} span={3}>
             <div class="imageContainer">
                 <img src={mainImg} alt="starring Olya and Danya" />
             </div>
         </ParallaxLayer>
-        <ParallaxLayer rate={1} offset={0.5}>
+        <ParallaxLayer rate={0.75} offset={0.5}>
             <div class="textContainer">
-                <h1>Save the date</h1>
+                <h1>Приглашение на свадьбу</h1>
                 <div class="info">
                     <span class="place">Надеево<br/>Вологда</span>
                     <span class="names">Даниил и Ольга</span>
@@ -53,7 +53,7 @@
     }
 
     h1 {
-        font-size: 150px;
+        font-size: 75px;
         margin-bottom: 20px;
         line-height: 1.3;
         /*font-family: "Amatic SC", cursive;*/
@@ -74,7 +74,6 @@
     }
 
     .info .names {
-        font-family: "Great Vibes", cursive;
         font-size: 40px;
         line-height: 43px;
     }

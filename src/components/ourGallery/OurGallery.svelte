@@ -2,7 +2,7 @@
     import FilterGallery from "../../features/filterGallery/FilterGallery.svelte";
 </script>
 
-<section>
+<section id="gallery" data-section="true">
     <span class="memories">OUR MEMORIES</span>
     <h2>Wedding gallery</h2>
     <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>

@@ -1,7 +1,7 @@
 <script lang="ts">
-    import {ACCORDION_IMAGES} from "../../contants";
+    import {ACCORDION_IMAGES} from "../../constants";
     import LocationIcon from "../icons/LocationIcon.svelte";
-    import {ACCORDION_DATA} from "../../contants";
+    import {ACCORDION_DATA} from "../../constants";
     import {slide} from "svelte/transition";
     import {cubicInOut} from 'svelte/easing';
 
@@ -18,7 +18,7 @@
 
 </script>
 
-<div class="container">
+<div id="events" class="container" data-section="true">
     <p class="special">OUR SPECIAL EVENTS</p>
     <h2>Wedding events</h2>
     <p class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore

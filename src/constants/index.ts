@@ -6,7 +6,19 @@ import commonPhoto3 from './../assets/commonPhoto4.jpg';
 export type GalleryImageType = {
     src: string;
     category: string;
-}
+};
+
+export type NavigationLinkType = {
+    href: string;
+    title: string;
+};
+
+export const NAV_LINKS: Array<NavigationLinkType> = [
+    {href: '#main', title: 'Главная'},
+    {href: '#events', title: 'События'},
+    {href: '#gallery', title: 'Галлерея'},
+    {href: '#contacts', title: 'Контакты'},
+];
 
 export const ACCORDION_IMAGES = [commonPhoto, commonPhoto1, commonPhoto2, commonPhoto3];
 export const ACCORDION_DATA = [

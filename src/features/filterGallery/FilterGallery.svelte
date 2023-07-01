@@ -1,6 +1,6 @@
 <script lang="ts">
     import Gallery from "../../components/gallery/Gallery.svelte";
-    import {GALLERY_IMAGES, GALLERY_TABS} from "../../contants";
+    import {GALLERY_IMAGES, GALLERY_TABS} from "../../constants";
 
     let currentTab = 'all';
 
