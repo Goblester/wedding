@@ -56,8 +56,8 @@
         font-size: 75px;
         margin-bottom: 20px;
         line-height: 1.3;
-        /*font-family: "Amatic SC", cursive;*/
-        font-weight: 700;
+        font-family: Caveat, cursive;
+        font-weight: 500;
     }
 
     .info {
@@ -74,6 +74,8 @@
     }
 
     .info .names {
+        font-family: Caveat, cursive;
+        font-weight: 400;
         font-size: 40px;
         line-height: 43px;
     }

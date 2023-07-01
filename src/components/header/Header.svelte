@@ -41,12 +41,14 @@
         position: fixed;
         background-color: white;
         color: black;
+        border-bottom: 1px solid  rgb(206, 212, 218);
     }
 
     .logo {
         margin-left: 34px;
         font-size: 28px;
-        font-family: Lobster, cursive;
+        font-family: Caveat, cursive;
+        font-weight: 700;
     }
 
     .links {
@@ -58,7 +60,6 @@
         list-style: none;
         padding: 8px 16px;
         font-size: 16px;
-        font-weight: 300;
         text-decoration: none;
     }
 

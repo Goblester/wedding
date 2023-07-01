@@ -40,7 +40,8 @@
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-        font-family: 'Open Sans', Arial, sans-serif;
+        font-family: 'Mulish', sans-serif;
+        font-weight: 300;
     }
 
     :global(body) {
