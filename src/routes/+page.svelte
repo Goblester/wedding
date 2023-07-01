@@ -5,6 +5,7 @@
     import CountDown from "../components/countDown/CountDown.svelte";
     import WeddingEvents from "../components/weddingEvents/WeddingEvents.svelte";
     import OurGallery from "../components/ourGallery/OurGallery.svelte";
+    import Footer from "../components/footer/Footer.svelte";
 </script>
 <Header/>
 <Main/>
@@ -12,6 +13,7 @@
 <CountDown />
 <WeddingEvents />
 <OurGallery />
+<Footer />
 
 <style>
     :global(*) {
