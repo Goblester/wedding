@@ -2,8 +2,8 @@
     import Heart from "../icons/HeartIcon.svelte";
 </script>
 <section class="container">
-    <h2>Hello!</h2>
-    <p class="invText">We invite you to celebrate our wedding</p>
+    <h2>Привет!</h2>
+    <p class="invText">Мы приглашаем вас на нашу свадьбу</p>
     <div class="couple">
         <div class="left">
             <div class="leftText">
@@ -40,7 +40,7 @@
     .container {
         padding: 112px 0;
         height: 589px;
-        background-color: cadetblue;
+        background-color: white;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -102,7 +102,6 @@
         font-size: 16px;
         margin-top: 0;
         margin-bottom: 1rem;
-        width: 336px;
         font-weight: 300;
         line-height: 1.7;
     }

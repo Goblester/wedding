@@ -82,10 +82,11 @@
 
     .accordionPanel {
         margin-top: 80px;
-        width: 936px;
+        max-width: 936px;
         margin-left: auto;
         margin-right: auto;
         display: flex;
+        flex-wrap: wrap;
         gap: 24px;
     }
 

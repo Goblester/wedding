@@ -56,7 +56,8 @@
     :global(h2) {
         margin-bottom: 10px;
         line-height: 1.5;
-        font-family: cursive;
+        font-family: Caveat, cursive;
+        font-weight: 700;
         font-size: 50px;
         color: #000;
     }

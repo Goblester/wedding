@@ -1,4 +1,4 @@
-<script lang="ts">
+<script>
 
 
     import {onMount} from "svelte";
@@ -82,9 +82,10 @@
         margin-top: 144px;
         margin-left: auto;
         margin-right: auto;
-        width: 1160px;
+        max-width: 1160px;
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
         align-items: center;
     }
 
