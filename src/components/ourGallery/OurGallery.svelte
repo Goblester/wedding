@@ -1,4 +1,4 @@
-<section id="gallery" data-section="true">
+<section>
     <span class="memories">Наши воспоминания</span>
     <h2>Свадебная галлерея</h2>
     <p class="description">Coming soon...</p>

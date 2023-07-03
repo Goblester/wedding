@@ -32,7 +32,7 @@
     {/if}
 
 {:else}
-    <nav class:fixed>
+    <nav class="desktop" class:fixed>
         <ul class="links">
             {#each NAV_LINKS as link}
                 <li class:active={link.href.includes($currentSection)}>
@@ -47,6 +47,9 @@
 <svelte:window bind:innerWidth={width}/>
 
 <style>
+    .desktop {
+        margin-right: 34px;
+    }
     button {
         outline: transparent;
         border: none;

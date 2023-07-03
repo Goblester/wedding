@@ -2,7 +2,7 @@
     import Heart from "../icons/HeartIcon.svelte";
 </script>
 <section>
-    <div  class="container">
+    <div id="invitation" class="container" data-section="true">
         <h2>Привет!</h2>
         <p class="invText">Мы приглашаем вас на нашу свадьбу</p>
         <div class="couple">

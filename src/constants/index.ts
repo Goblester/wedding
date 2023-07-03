@@ -15,8 +15,8 @@ export type NavigationLinkType = {
 
 export const NAV_LINKS: Array<NavigationLinkType> = [
     {href: '#main', title: 'Главная'},
+    {href: '#invitation', title: 'О нас'},
     {href: '#events', title: 'События'},
-    {href: '#gallery', title: 'Галерея'},
     {href: '#contacts', title: 'Контакты'},
 ];
 

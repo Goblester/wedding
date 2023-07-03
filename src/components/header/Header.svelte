@@ -41,4 +41,10 @@
         font-family: Caveat, cursive;
         font-weight: 700;
     }
+
+    @media(max-width: 769px) {
+        .logo {
+            margin-left: 8px;
+        }
+    }
 </style>

@@ -58,7 +58,7 @@
     .container {
         position: relative;
         width: 100%;
-        padding: 112px 0;
+        padding: 112px 20px;
         text-align: center;
         color: white;
     }

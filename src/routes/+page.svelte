@@ -5,10 +5,10 @@
     import Invitation from "../components/invitation/Invitation.svelte";
     import CountDown from "../components/countDown/CountDown.svelte";
     import WeddingEvents from "../components/weddingEvents/WeddingEvents.svelte";
-    import OurGallery from "../components/ourGallery/OurGallery.svelte";
     import Footer from "../components/footer/Footer.svelte";
     import {currentSection} from "../store/currentSection";
     import {onMount} from "svelte";
+    import Contacts from "../components/Contacts/Contacts.svelte";
 
     onMount(() => {
         const sectionObserver = new IntersectionObserver(entries => {
@@ -28,7 +28,7 @@
 <Invitation/>
 <CountDown />
 <WeddingEvents />
-<OurGallery />
+<Contacts />
 <Footer />
 
 <style>
