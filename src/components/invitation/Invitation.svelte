@@ -1,41 +1,48 @@
 <script lang="ts">
     import Heart from "../icons/HeartIcon.svelte";
 </script>
-<section class="container">
-    <h2>Привет!</h2>
-    <p class="invText">Мы приглашаем вас на нашу свадьбу</p>
-    <div class="couple">
-        <div class="left">
-            <div class="leftText">
-                <p class="name">Даниил</p>
-                <p class="description">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
-                    et
-                    dolore magna aliqua. Ut enim ad minim veniam
-                </p>
+<section>
+    <div  class="container">
+        <h2>Привет!</h2>
+        <p class="invText">Мы приглашаем вас на нашу свадьбу</p>
+        <div class="couple">
+            <div class="left">
+                <div class="leftText">
+                    <p class="name">Даниил</p>
+                    <p class="description">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                        et
+                        dolore magna aliqua. Ut enim ad minim veniam
+                    </p>
+                </div>
+                <div class="imgContainer">
+                    <img src="src/assets/daniil.jpg" alt="daniil" class="image"/>
+                </div>
             </div>
-            <div class="imgContainer">
-                <img src="src/assets/daniil.jpg" alt="daniil" class="image"/>
+            <div class="heart">
+                <Heart/>
             </div>
-        </div>
-        <div class="heart">
-            <Heart/>
-        </div>
-        <div class="right">
-            <div class="rightText">
-                <p class="name">Оля</p>
-                <p class="description">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
-                    et
-                    dolore magna aliqua. Ut enim ad minim veniam
-                </p>
+            <div class="right">
+                <div class="rightText">
+                    <p class="name">Оля</p>
+                    <p class="description">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                        et
+                        dolore magna aliqua. Ut enim ad minim veniam
+                    </p>
+                </div>
+                <img src="src/assets/olya.jpg" alt="olga" class="image"/>
             </div>
-            <img src="src/assets/olya.jpg" alt="olga" class="image"/>
         </div>
     </div>
 </section>
 
 <style>
+    section {
+        background-color: white;
+        width: 100%;
+    }
+
     .container {
         padding: 112px 0;
         background-color: white;

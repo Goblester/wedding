@@ -1,17 +1,18 @@
 <script lang="ts">
     import Parallax from 'svelte-parallax/src/Parallax.svelte';
     import ParallaxLayer from 'svelte-parallax/src/ParallaxLayer.svelte';
+    import StickyLayer from 'svelte-parallax/src/StickyLayer.svelte';
     import mainImg from './../../assets/main.jpg';
 </script>
 
-<section  id="main" class="container" data-section="true">
-    <Parallax sections={3} config={{stiffness: 0.2, damping: 0.3}}>
-        <ParallaxLayer rate={0} span={3}>
+<section id="main" class="container" data-section="true">
+    <Parallax sections={2} config={{stiffness: 0.2, damping: 0.3}}>
+        <StickyLayer rate={0} span={1} style="z-index: -1">
             <div class="imageContainer">
                 <img src={mainImg} alt="starring Olya and Danya" />
             </div>
-        </ParallaxLayer>
-        <ParallaxLayer rate={0.75} offset={0.5}>
+        </StickyLayer>
+        <ParallaxLayer rate={0} offset={0.6}>
             <div class="textContainer">
                 <h1>Приглашение на свадьбу</h1>
                 <div class="info">
@@ -33,7 +34,7 @@
 
     .imageContainer {
         position: relative;
-        height: 100%;
+        height: 100vh;
         width: 100%;
     }
 
@@ -67,13 +68,8 @@
         justify-content: center;
     }
 
-    .info span {
+    .names {
         padding: 0 15px;
-        font-size: 16px;
-        line-height: 170%;
-    }
-
-    .info .names {
         font-family: Caveat, cursive;
         font-weight: 400;
         font-size: 40px;
@@ -81,12 +77,61 @@
     }
 
     .place {
+        font-size: 16px;
+        line-height: 170%;
+        padding-right: 15px;
         text-align: right;
         border-right: 2px solid white;
     }
 
     .date {
+        font-size: 16px;
+        line-height: 170%;
+        padding-left: 15px;
         text-align: left;
         border-left: 2px solid white;
+    }
+
+    @media (max-width: 768px) {
+
+        h1 {
+            font-size: 50px;
+        }
+
+        .names {
+            padding: 0 10px;
+            font-size: 28px;
+        }
+
+        .place {
+            font-size: 14px;
+            padding-right: 10px;
+        }
+
+        .date {
+            font-size: 14px;
+            padding-left: 10px;
+        }
+    }
+
+    @media (max-width: 375px) {
+
+        h1 {
+            font-size: 36px;
+        }
+
+
+        .names {
+            padding: 0 10px;
+            font-size: 24px;
+        }
+
+        .place {
+            padding-right: 10px;
+        }
+
+        .date {
+            padding-left: 10px;
+        }
     }
 </style>

@@ -9,9 +9,6 @@
     .container {
         text-align: center;
         padding: 10em 0 3em;
-        background-image: url(../../assets/commonPhoto.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
     }
 
     h2 {

@@ -6,6 +6,7 @@
 
 <style>
     section {
+        background-color: white;
         padding-top: 112px;
         text-align: center;
         display: flex;

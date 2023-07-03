@@ -56,14 +56,9 @@
 
 <style>
     .container {
-        background-image: url(../../assets/main.jpg);
-        background-size: cover;
-        background-repeat: no-repeat;
         position: relative;
-        background-position: center center;
         width: 100%;
         padding: 112px 0;
-        background-color: darkgrey;
         text-align: center;
         color: white;
     }
@@ -127,7 +122,7 @@
         }
 
         .bottomContainer {
-            margin-top: 112px;
+            margin-top: 60px;
             flex-direction: column;
         }
 
