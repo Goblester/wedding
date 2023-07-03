@@ -18,8 +18,8 @@
                 <img src="src/assets/daniil.jpg" alt="daniil" class="image"/>
             </div>
         </div>
-        <div class="heart" >
-            <Heart />
+        <div class="heart">
+            <Heart/>
         </div>
         <div class="right">
             <div class="rightText">
@@ -30,7 +30,6 @@
                     dolore magna aliqua. Ut enim ad minim veniam
                 </p>
             </div>
-
             <img src="src/assets/olya.jpg" alt="olga" class="image"/>
         </div>
     </div>
@@ -39,7 +38,6 @@
 <style>
     .container {
         padding: 112px 0;
-        height: 589px;
         background-color: white;
         display: flex;
         flex-direction: column;
@@ -124,6 +122,47 @@
 
         to {
             transform: scale(1);
+        }
+    }
+
+    @media (max-width: 769px) {
+        .container {
+            padding: 60px 0;
+        }
+
+        .invText {
+            margin-bottom: 40px;
+        }
+
+        .couple {
+            display: flex;
+            flex-direction: column;
+            width: 80%;
+        }
+
+
+        .heart {
+            display: none;
+        }
+
+        .left, .right {
+            flex-direction: column-reverse;
+            align-items: center;
+        }
+
+        .left {
+            margin-bottom: 40px;
+        }
+
+        .leftText, .rightText {
+            align-items: center;
+            text-align: center;
+            margin-left: 0;
+            margin-right: 0;
+        }
+
+        .name {
+            margin-top: 15px;
         }
     }
 

@@ -56,4 +56,4 @@ export const GALLERY_IMAGES: Array<GalleryImageType> = [
     {src: commonPhoto3, category: 'family'},
 ];
 
-export const GALLERY_TABS = ['all', 'moments', 'friends', 'banguet', 'family', 'party'];
+export const GALLERY_TABS = ['Все', 'Моменты', 'Друзья', 'Банкет', 'Семья', 'Вечеринка'];

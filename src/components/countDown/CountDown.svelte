@@ -24,47 +24,51 @@
 </script>
 
 <section class="container">
-    <h2>The big day<br/>
-        4 . August . 2023</h2>
+    <h2>День свадьбы<br/>
+        4 . Августа . 2023</h2>
     <p class="excitedText">We are so excited to celebrate our special day with our family and friends. Thank you so much
         for visiting our
         wedding website!</p>
     <div class="bottomContainer">
-        <span class="sideText">Just some hours...</span>
+        <span class="sideText">Всего несколько часов</span>
 
         <div class="timerContainer">
             <div class="dateItem">
                 <span class="dateValue">{days < 10 ? `0${days}` : days}</span>
-                <span class="dateName">DAYS</span>
+                <span class="dateName">ДНЕЙ</span>
             </div>
             <div class="dateItem">
                 <span class="dateValue">{hours < 10 ? `0${hours}` : hours}</span>
-                <span class="dateName">HOURS</span>
+                <span class="dateName">ЧАСОВ</span>
             </div>
             <div class="dateItem">
                 <span class="dateValue">{minutes < 10 ? `0${minutes}` : minutes}</span>
-                <span class="dateName">MINUTES</span>
+                <span class="dateName">МИНУТ</span>
             </div>
             <div class="dateItem">
                 <span class="dateValue">{seconds < 10 ? `0${seconds}` : seconds}</span>
-                <span class="dateName">SECONDS</span>
+                <span class="dateName">СЕКУНД</span>
             </div>
         </div>
-        <span class="sideText">...until we get married!</span>
+        <span class="sideText">...до того как мы поженимся!</span>
     </div>
 </section>
 
 <style>
     .container {
-        /*background-image: url(../images/countdown-bg.jpg);*/
+        background-image: url(../../assets/main.jpg);
         background-size: cover;
         background-repeat: no-repeat;
         position: relative;
         background-position: center center;
         width: 100%;
-        padding: 7em 0;
+        padding: 112px 0;
         background-color: darkgrey;
         text-align: center;
+        color: white;
+    }
+
+    h2 {
         color: white;
     }
 
@@ -90,7 +94,7 @@
     }
 
     .sideText {
-        font-family: "Great Vibes", cursive;
+        font-family: Caveat, cursive;
         font-size: 34px;
     }
 
@@ -115,5 +119,34 @@
     .dateName {
         font-size: 14px;
         opacity: .7;
+    }
+
+    @media (max-width: 769px) {
+        .container {
+            padding: 60px 0;
+        }
+
+        .bottomContainer {
+            margin-top: 112px;
+            flex-direction: column;
+        }
+
+        .dateValue {
+            font-size: 42px;
+        }
+
+        .dateName {
+            font-size: 12px;
+        }
+    }
+
+    @media (max-width: 425px) {
+        .dateItem {
+            width: 75px;
+        }
+
+        .sideText {
+            font-size: 29px;
+        }
     }
 </style>

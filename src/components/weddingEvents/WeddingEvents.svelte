@@ -19,8 +19,8 @@
 </script>
 
 <div id="events" class="container" data-section="true">
-    <p class="special">OUR SPECIAL EVENTS</p>
-    <h2>Wedding events</h2>
+    <p class="special">ОСОБЫЕ СОБЫТИЯ</p>
+    <h2>Наше расписание</h2>
     <p class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
         et dolore magna aliqua. Ut enim ad minim veniam</p>
     <div class="accordionPanel">
@@ -28,8 +28,8 @@
         {#each ACCORDION_IMAGES as image, index}
                 {#if index === currentIndex}
                     <img class="accImage"
-                         in:scrolling|global={{duration: 300, move: 'in'}}
-                         out:scrolling|global={{duration: 300, move: 'out'}}
+                         in:scrolling={{duration: 300, move: 'in'}}
+                         out:scrolling={{duration: 300, move: 'out'}}
                          src={image}
                          alt="wedding event" />
                 {/if}
@@ -59,7 +59,7 @@
 <style>
 
     .container {
-        background-color: cornsilk;
+        background-color: white;
         text-align: center;
         padding: 112px 0;
     }
@@ -92,9 +92,14 @@
 
     .imgContainer {
         position: relative;
-        width: 50%;
+        width: calc(50% - 12px);
         overflow: hidden;
         height: 600px;
+    }
+
+
+    .rightContainer {
+        width: calc(50% - 12px);
     }
 
     .accImage {
@@ -105,9 +110,6 @@
         top: 0;
     }
 
-    .rightContainer {
-        width: 50%;
-    }
 
     h3 {
         font-size: 20px;
@@ -155,6 +157,25 @@
     .accordion {
         display: flex;
         flex-direction: column;
+    }
+
+    @media (max-width: 937px) {
+        .container {
+            padding: 60px 20px;
+        }
+
+        .accordionPanel {
+            margin-top: 40px;
+        }
+
+        .rightContainer {
+            max-width: 100%;
+        }
+
+        .imgContainer {
+            width: 100%;
+            height: auto;
+        }
     }
 
 </style>
