@@ -6,6 +6,7 @@
     import {cubicInOut} from 'svelte/easing';
 
     let currentIndex = 0;
+    let direction = 'down'
 
     const scrolling = (
         _,
@@ -13,7 +14,10 @@
     ) => ({
         duration,
         css: (t) =>
-            `transform: translateY(${move === 'out' ? '-' : ''}${100 - cubicInOut(t) * 100}%);`,
+            `transform: translateY(${
+                direction === 'up' ?
+                    move === 'out' ? '' : '-'
+                    : move === 'out' ? '-' : ''}${100 - cubicInOut(t) * 100}%);`,
     });
 
 </script>
@@ -25,15 +29,17 @@
         et dolore magna aliqua. Ut enim ad minim veniam</p>
     <div class="accordionPanel">
         <div class="imgContainer">
-        {#each ACCORDION_IMAGES as image, index}
+            {#each ACCORDION_IMAGES as image, index}
                 {#if index === currentIndex}
-                    <img class="accImage"
+                    <div class="accImage"
                          in:scrolling={{duration: 300, move: 'in'}}
                          out:scrolling={{duration: 300, move: 'out'}}
-                         src={image}
-                         alt="wedding event" />
+                    >
+                        <img src={image} alt="wedding event"/>
+                    </div>
+
                 {/if}
-        {/each}
+            {/each}
         </div>
         <div class="rightContainer">
             <h3>4 Августа, 2023 Вологда, Россия</h3>
@@ -41,6 +47,7 @@
                 {#each ACCORDION_DATA as accItem, index}
                     <div class="textItemContainer">
                         <button type="button" on:click={() =>{
+                            direction = currentIndex < index ? 'up': 'down';
                             currentIndex = index;
                         }}>{accItem.time}</button>
                         {#if currentIndex === index}
@@ -103,13 +110,20 @@
     }
 
     .accImage {
+        padding-top: 2px;
+        padding-bottom: 2px;
         width: 100%;
         height: 100%;
         position: absolute;
         left: 0;
         top: 0;
+        overflow: hidden;
     }
 
+    img {
+        width: 100%;
+        height: auto;
+    }
 
     h3 {
         font-size: 20px;
@@ -169,12 +183,11 @@
         }
 
         .rightContainer {
-            max-width: 100%;
+            width: 100%;
         }
 
         .imgContainer {
             width: 100%;
-            height: auto;
         }
     }
 

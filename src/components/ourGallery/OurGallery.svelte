@@ -1,12 +1,7 @@
-<script lang="ts">
-    import FilterGallery from "../../features/filterGallery/FilterGallery.svelte";
-</script>
-
 <section id="gallery" data-section="true">
-    <span class="memories">OUR MEMORIES</span>
-    <h2>Wedding gallery</h2>
-    <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
-    <FilterGallery />
+    <span class="memories">Наши воспоминания</span>
+    <h2>Свадебная галлерея</h2>
+    <p class="description">Coming soon...</p>
 </section>
 
 <style>
@@ -30,7 +25,7 @@
     h2 {
         margin-bottom: 10px;
         line-height: 1.5;
-        font-family: "Great Vibes", cursive;
+        font-family: Caveat, cursive;
         font-size: 50px;
         color: #000;
     }
@@ -39,6 +34,12 @@
         width: 75%;
         margin-left: auto;
         margin-right: auto;
-        margin-bottom: 80px;
+    }
+
+    @media(max-width: 768px) {
+        section {
+            padding-top: 60px;
+            padding-bottom: 60px;
+        }
     }
 </style>
