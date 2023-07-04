@@ -4,11 +4,17 @@
     import MenuIcon from "../icons/MenuIcon.svelte";
     import {NAV_LINKS} from "../../constants";
     import {currentSection} from "../../store/currentSection";
+    import {modal} from "../../store/modal";
 
     export let fixed = false
     let isMenuOpened = false;
     let width;
     $: isMobile = width < 769;
+
+    const onQuizClick = () => {
+        isMenuOpened = false;
+        modal.set('contacts');
+    }
 </script>
 
 {#if isMobile}
@@ -27,6 +33,9 @@
                         <a href={link.href}>{link.title}</a>
                     </button>
                 {/each}
+                <button on:click={onQuizClick}>
+                    <span class="">Опрос</span>
+                </button>
             </ul>
         </nav>
     {/if}
@@ -39,6 +48,11 @@
                     <a href={link.href}>{link.title}</a>
                 </li>
             {/each}
+            <li>
+                <button class="quizBtn" on:click={onQuizClick}>
+                    <span class="">Опрос</span>
+                </button>
+            </li>
         </ul>
     </nav>
 {/if}
@@ -50,6 +64,7 @@
     .desktop {
         margin-right: 34px;
     }
+
     button {
         outline: transparent;
         border: none;
@@ -78,7 +93,7 @@
         text-align: center;
     }
 
-    .mobile a {
+    .mobile a, .mobile span {
         font-size: 22px;
         padding: 12px 16px;
     }
@@ -89,7 +104,7 @@
         list-style: none;
     }
 
-    a {
+    a, span {
         display: block;
         list-style: none;
         padding: 8px 16px;
@@ -97,11 +112,11 @@
         text-decoration: none;
     }
 
-    nav a {
+    nav a, nav span {
         color: white;
     }
 
-    .fixed a {
+    .fixed a, .fixed span {
         color: black;
     }
 
@@ -112,5 +127,9 @@
 
     .fixed .active {
         border-color: black;
+    }
+
+    .quizBtn {
+        padding: 4px;
     }
 </style>

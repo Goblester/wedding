@@ -8,7 +8,8 @@
     import Footer from "../components/footer/Footer.svelte";
     import {currentSection} from "../store/currentSection";
     import {onMount} from "svelte";
-    import Contacts from "../components/Contacts/Contacts.svelte";
+    import Contacts from "../components/contacts/Contacts.svelte";
+    import ContactsModal from "../components/contacts/ContactsModal.svelte";
 
     onMount(() => {
         const sectionObserver = new IntersectionObserver(entries => {
@@ -30,7 +31,7 @@
 <WeddingEvents />
 <Contacts />
 <Footer />
-
+<ContactsModal />
 <style>
     :global(html) {
         scroll-behavior: smooth;
