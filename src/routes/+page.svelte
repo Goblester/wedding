@@ -7,10 +7,11 @@
     import WeddingEvents from "../components/weddingEvents/WeddingEvents.svelte";
     import Footer from "../components/footer/Footer.svelte";
     import {currentSection} from "../store/currentSection";
-    import {onMount} from "svelte";
+    import {onDestroy, onMount} from "svelte";
     import Contacts from "../components/contacts/Contacts.svelte";
     import ContactsModal from "../components/contacts/ContactsModal.svelte";
-
+    import {modal} from "../store/modal";
+    let timeout;
     onMount(() => {
         const sectionObserver = new IntersectionObserver(entries => {
             entries.forEach(entry => {
@@ -21,7 +22,15 @@
         })
         const sections = document.querySelectorAll('[data-section]');
         sections.forEach(section => sectionObserver.observe(section));
-    })
+
+        timeout = setTimeout(() => {
+            modal.set('contacts');
+        }, 3000)
+    });
+
+    onDestroy(() => {
+        clearTimeout(timeout);
+    });
 
 </script>
 <Header/>
