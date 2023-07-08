@@ -1,17 +1,33 @@
-<script lang="ts">
+<script>
     import Heart from "../icons/HeartIcon.svelte";
+    import daniilImg from '../../assets/daniil.jpeg';
+    import olgaImg from '../../assets/olga.jpg';
+
 </script>
 <section>
     <div id="invitation" class="container" data-section="true">
         <h2>Привет!</h2>
         <p class="invText">Мы приглашаем вас на нашу свадьбу</p>
+        <p class="description">
+            На нашей свадьбе не будет фотографа, поэтому будем рады, если вы поснимаете нас на телефон! А мы посмотрим
+            на свадьбу глазами дорогих гостей :)
+        </p>
+        <p class="description">
+            Дресс-код расслабленный: не нужны официальные костюмы, каблуки и черный цвет. Выберите что-то удобное и
+            веселенькое! Синие джинсы лучше оставьте на второй день ;) В любом случае надевайте то, что вам нравится, мы
+            не обидимся
+        </p>
+        <p class="description last">
+            Мы сейчас копим на квартиру и будем рады, если вы нам в этом поможете! Но если вы уже придумали другой
+            подарок — обязательно дарите, нам будет очень приятно!
+        </p>
         <div class="couple">
             <div class="left">
                 <div class="leftText">
                     <p class="name">Даниил</p>
                 </div>
                 <div class="imgContainer">
-                    <img src="src/assets/daniil.jpg" alt="daniil" class="image"/>
+                    <img src={daniilImg} alt="daniil" class="image"/>
                 </div>
             </div>
             <div class="heart">
@@ -19,9 +35,9 @@
             </div>
             <div class="right">
                 <div class="rightText">
-                    <p class="name">Оля</p>
+                    <p class="name">Ольга</p>
                 </div>
-                <img src="src/assets/olya.jpg" alt="olga" class="image"/>
+                <img src={olgaImg} alt="olga" class="image"/>
             </div>
         </div>
     </div>
@@ -50,11 +66,26 @@
         font-size: 18px;
         line-height: 1.5;
         text-align: center;
-        margin-bottom: 80px;
+        margin-bottom: 20px;
+    }
+
+    .description {
+        text-align: center;
+        max-width: 750px;
+        font-weight: 500;
+        font-size: 18px;
+        margin-bottom: 10px;
+        border: 1px solid black;
+        padding: 6px 12px;
+    }
+
+    .last {
+        margin-bottom: 40px;
     }
 
     .couple {
         display: flex;
+        justify-content: center;
     }
 
     .left, .right {
@@ -117,6 +148,11 @@
     }
 
     @media (max-width: 769px) {
+
+        .description {
+            width: 80%;
+        }
+
         .container {
             padding: 60px 0;
         }

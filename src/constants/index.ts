@@ -1,7 +1,9 @@
-import commonPhoto from './../assets/commonPhoto.jpg';
-import commonPhoto1 from './../assets/commonPhoto2.jpg';
-import commonPhoto2 from './../assets/commonPhoto3.jpg';
-import commonPhoto3 from './../assets/commonPhoto4.jpg';
+import event1 from './../assets/event1.jpg';
+import event2 from './../assets/event2.jpg';
+import event3 from './../assets/event3.jpg';
+import event4 from './../assets/event4.jpg';
+import event5 from './../assets/event5.jpg';
+import event6 from './../assets/event6.jpg';
 
 export type GalleryImageType = {
     src: string;
@@ -20,40 +22,49 @@ export const NAV_LINKS: Array<NavigationLinkType> = [
     {href: '#contacts', title: 'Контакты'},
 ];
 
-export const ACCORDION_IMAGES = [commonPhoto, commonPhoto1, commonPhoto2, commonPhoto3];
+export const ACCORDION_IMAGES = [event1, event2, event3, event4, event5, event6];
 export const ACCORDION_DATA = [
     {
-        time: '5:30pm Celebration',
-        location: ' 5th Ave, NY',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-        image: commonPhoto
+        time: '12:00 Регистрация брака',
+        location: ' Вологда, Комсомольская 4',
+        description: 'Регистрация брака в ЗАГСе, все как обычно. Пускают 20 человек, в опросе можете указать хотите присутствовать или нет',
     },
     {
-        time: '5:30pm Celebration',
-        location: ' 5th Ave, NY',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-        image: commonPhoto1
+        time: '12:30 Фуршет',
+        location: ' Вологда, Комсомольская 4',
+        description: 'Небольшой фуршет у ЗАГСа (шампанское-конфетки) и общее фото на фоне набережной',
     },
     {
-        time: '5:30pm Celebration',
-        location: ' 5th Ave, NY',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-        image: commonPhoto2
+        time: '13:00 Трансфер',
+        location: ' Вологда, Комсомольская 4',
+        description: 'Автобус от ЗАГСа до деревни, очень удобно и никто не потеряется. Если поедете на своей машине - скажите нам, пожалуйста!',
     },
     {
-        time: '5:30pm Celebration',
-        location: ' 5th Ave, NY',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-        image: commonPhoto3
+        time: '14:00 Знакомство гостей',
+        location: ' Надеево, Сельская 3',
+        description: 'Игры на знакомство и фуршет, молодожены переводят дух и переодеваются',
     },
+    {
+        time: '15:00 Основная программа',
+        location: ' Надеево, Сельская 3',
+        description: 'Застолье, конкурсы, тосты, квиз, движ!',
+    },
+    {
+        time: '20:30 Конец вечера',
+        location: ' Надеево, Сельская 3',
+        description: 'Бенгальские огни и завершение программы: дальше танцы и душевные посиделки компаниями',
+    },
+
 ];
 
 
 export const GALLERY_IMAGES: Array<GalleryImageType> = [
-    {src: commonPhoto, category: 'moments'},
-    {src: commonPhoto1, category: 'friends'},
-    {src: commonPhoto2, category: 'moments'},
-    {src: commonPhoto3, category: 'family'},
+    {src: event1, category: 'moments'},
+    {src: event2, category: 'friends'},
+    {src: event3, category: 'moments'},
+    {src: event4, category: 'family'},
 ];
 
 export const GALLERY_TABS = ['Все', 'Моменты', 'Друзья', 'Банкет', 'Семья', 'Вечеринка'];
+
+export const CONTACTS_SHOWED = 'CONTACTS_SHOWED';

@@ -66,7 +66,7 @@
     .container {
         background-color: white;
         text-align: center;
-        padding: 112px 0;
+        padding-top: 112px;
     }
 
     .special {
@@ -165,7 +165,7 @@
 
     @media (max-width: 937px) {
         .container {
-            padding: 60px 20px;
+            padding: 60px 20px 0;
         }
 
         .accordionPanel {
@@ -178,6 +178,12 @@
 
         .imgContainer {
             width: 100%;
+        }
+    }
+
+    @media (max-width: 500px) {
+        .imgContainer {
+            height: 374px;
         }
     }
 

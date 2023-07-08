@@ -2,10 +2,14 @@
     import Modal from "../modal/Modal.svelte";
     import {modal} from "../../store/modal";
     import QuizIcon from "../icons/QuizIcon.svelte";
+    import {CONTACTS_SHOWED} from "../../constants";
 
     $: isOpen = $modal === 'contacts';
 
-    const onClose = () => modal.set(null);
+    const onClose = () => {
+        modal.set(null);
+        document.cookie = `${CONTACTS_SHOWED}=true max-age=259200`;
+    }
 </script>
 
 <Modal isOpen={isOpen}>

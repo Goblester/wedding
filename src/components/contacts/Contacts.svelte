@@ -4,7 +4,7 @@
     <span class="memories">Обратная связь</span>
     <h2>Контакты</h2>
     <p class="description">
-        Пожалуйста, пройдите опрос
+        Пожалуйста, пройдите опрос и помогите нам все правильно организовать!
     </p>
     <a class="quizBtn" href="https://docs.google.com/forms/u/0/d/1veLfqbBfKjfAVuEgoXmebgOTSszeTgukF7M6Vb-xWtI/viewform?edit_requested=true">
         Принять участие

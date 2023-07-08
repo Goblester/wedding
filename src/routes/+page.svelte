@@ -23,7 +23,9 @@
         sections.forEach(section => sectionObserver.observe(section));
 
         timeout = setTimeout(() => {
-            modal.set('contacts');
+            if(!document.cookie.includes('CONTACTS_SHOWED')) {
+                modal.set('contacts');
+            }
         }, 3000)
     });
 
