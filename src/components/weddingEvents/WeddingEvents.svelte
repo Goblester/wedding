@@ -130,8 +130,6 @@
     button {
         width: 100%;
         padding: 10px 15px;
-        border-top-left-radius: 3px;
-        border-top-right-radius: 3px;
         background-color: #e9e9e9;
         border: transparent;
         outline: transparent;

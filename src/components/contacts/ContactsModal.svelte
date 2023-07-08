@@ -32,7 +32,6 @@
 <style>
     .container {
         background-color: white;
-        border-radius: 8px;
         width: 400px;
         height: 400px;
         display: flex;
@@ -130,7 +129,6 @@
         font-size: 1.25rem;
         text-transform: capitalize;
         color: #212529;
-        border-radius: 8px;
         background-color: rgba(33,37, 41, 0);
         border: 1px solid #212529;
         transition: all 0.25s;
@@ -142,5 +140,4 @@
         background-color: rgba(33,37, 41, 100);
         border: 1px solid white;
     }
-
 </style>
