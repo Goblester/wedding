@@ -18,7 +18,7 @@
                     currentSection.set(entry.target.id);
                 }
             })
-        })
+        }, {threshold: 0.5})
         const sections = document.querySelectorAll('[data-section]');
         sections.forEach(section => sectionObserver.observe(section));
 
