@@ -74,13 +74,13 @@
         max-width: 750px;
         font-weight: 500;
         font-size: 18px;
-        margin-bottom: 10px;
-        border: 1px solid black;
+        border-bottom: 1px solid black;
         padding: 6px 12px;
     }
 
     .last {
         margin-bottom: 40px;
+        border: none;
     }
 
     .couple {

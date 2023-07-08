@@ -38,7 +38,7 @@
     .logo {
         margin-left: 34px;
         font-size: 28px;
-        font-family: Caveat, cursive;
+        font-family: 'Caveat', cursive;
         font-weight: 700;
     }
 

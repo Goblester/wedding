@@ -26,7 +26,7 @@
     h2 {
         margin-bottom: 10px;
         line-height: 1.5;
-        font-family: Caveat, cursive;
+        font-family: 'Caveat', cursive;
         font-size: 50px;
         color: #000;
     }

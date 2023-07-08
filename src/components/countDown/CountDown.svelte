@@ -26,9 +26,9 @@
 <section class="container">
     <h2>День свадьбы<br/>
         4 . Августа . 2023</h2>
-    <p class="excitedText">We are so excited to celebrate our special day with our family and friends. Thank you so much
-        for visiting our
-        wedding website!</p>
+    <p class="excitedText">
+        Мы очень рады отпраздновать этот особый день в кругу семьи и близких друзей!
+    </p>
     <div class="bottomContainer">
         <span class="sideText">Всего несколько часов</span>
 
@@ -68,13 +68,13 @@
     }
 
     .excitedText {
-        width: 75%;
+        width: 80%;
         margin-left: auto;
         margin-right: auto;
         font-size: 18px;
         line-height: 1.5;
         color: white;
-        font-weight: 300;
+        font-weight: 700;
     }
 
     .bottomContainer {
@@ -89,7 +89,7 @@
     }
 
     .sideText {
-        font-family: Caveat, cursive;
+        font-family: 'Caveat', cursive;
         font-size: 34px;
     }
 

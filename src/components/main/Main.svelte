@@ -51,7 +51,7 @@
         font-size: 75px;
         margin-bottom: 20px;
         line-height: 1.3;
-        font-family: Caveat, cursive;
+        font-family: 'Caveat', cursive;
         font-weight: 500;
     }
 
@@ -64,7 +64,7 @@
 
     .names {
         padding: 0 15px;
-        font-family: Caveat, cursive;
+        font-family: 'Caveat', cursive;
         font-weight: 400;
         font-size: 40px;
         line-height: 43px;
