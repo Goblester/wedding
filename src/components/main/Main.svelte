@@ -2,17 +2,14 @@
     import Parallax from 'svelte-parallax/src/Parallax.svelte';
     import ParallaxLayer from 'svelte-parallax/src/ParallaxLayer.svelte';
     import StickyLayer from 'svelte-parallax/src/StickyLayer.svelte';
-    import mainImg from './../../assets/main.jpg';
 </script>
 
 <section id="main" class="container" data-section="true">
     <Parallax sections={2} config={{stiffness: 0.2, damping: 0.3}}>
         <StickyLayer rate={0} span={1} style="z-index: -1">
-            <div class="imageContainer">
-                <img src={mainImg} alt="starring Olya and Danya" />
-            </div>
+            <div class="imageContainer"></div>
         </StickyLayer>
-        <ParallaxLayer rate={0} offset={0.6}>
+        <ParallaxLayer rate={0} span={1} offset={0.6}>
             <div class="textContainer">
                 <h1>Приглашение на свадьбу</h1>
                 <div class="info">
@@ -36,13 +33,10 @@
         position: relative;
         height: 100vh;
         width: 100%;
-    }
-
-    img {
-        position: absolute;
-        width: 100%;
-        height: auto;
-        top: 0;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-image: url("/src/assets/main.jpg");
     }
 
     .textContainer {

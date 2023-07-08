@@ -9,11 +9,6 @@
             <div class="left">
                 <div class="leftText">
                     <p class="name">Даниил</p>
-                    <p class="description">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
-                        et
-                        dolore magna aliqua. Ut enim ad minim veniam
-                    </p>
                 </div>
                 <div class="imgContainer">
                     <img src="src/assets/daniil.jpg" alt="daniil" class="image"/>
@@ -25,11 +20,6 @@
             <div class="right">
                 <div class="rightText">
                     <p class="name">Оля</p>
-                    <p class="description">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
-                        et
-                        dolore magna aliqua. Ut enim ad minim veniam
-                    </p>
                 </div>
                 <img src="src/assets/olya.jpg" alt="olga" class="image"/>
             </div>
@@ -78,7 +68,8 @@
     .leftText {
         display: flex;
         flex-direction: column;
-        align-items: flex-end;
+        align-items: center;
+        justify-content: center;
         margin-right: 25px;
         text-align: right;
     }
@@ -86,7 +77,8 @@
     .rightText {
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
+        justify-content: center;
         margin-left: 25px;
     }
 
@@ -101,14 +93,6 @@
         font-size: 24px;
         font-weight: 500;
         line-height: 1.2;
-    }
-
-    .description {
-        font-size: 16px;
-        margin-top: 0;
-        margin-bottom: 1rem;
-        font-weight: 300;
-        line-height: 1.7;
     }
 
     .heart {

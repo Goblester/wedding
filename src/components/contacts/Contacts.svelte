@@ -1,6 +1,6 @@
 
 
-<section id="contacts" data-section="true">
+<footer id="contacts" data-section="true">
     <span class="memories">Обратная связь</span>
     <h2>Контакты</h2>
     <p class="description">
@@ -9,10 +9,10 @@
     <a class="quizBtn" href="https://docs.google.com/forms/u/0/d/1veLfqbBfKjfAVuEgoXmebgOTSszeTgukF7M6Vb-xWtI/viewform?edit_requested=true">
         Принять участие
     </a>
-</section>
+</footer>
 
 <style>
-    section {
+    footer {
         background-color: white;
         padding: 60px 0;
         text-align: center;
@@ -62,7 +62,7 @@
     }
 
     @media(max-width: 768px) {
-        section {
+        footer {
             padding-top: 60px;
             padding-bottom: 60px;
         }

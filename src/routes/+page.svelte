@@ -5,7 +5,6 @@
     import Invitation from "../components/invitation/Invitation.svelte";
     import CountDown from "../components/countDown/CountDown.svelte";
     import WeddingEvents from "../components/weddingEvents/WeddingEvents.svelte";
-    import Footer from "../components/footer/Footer.svelte";
     import {currentSection} from "../store/currentSection";
     import {onDestroy, onMount} from "svelte";
     import Contacts from "../components/contacts/Contacts.svelte";
@@ -39,8 +38,8 @@
 <CountDown />
 <WeddingEvents />
 <Contacts />
-<Footer />
 <ContactsModal />
+
 <style>
     :global(html) {
         scroll-behavior: smooth;

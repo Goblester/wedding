@@ -25,8 +25,6 @@
 <div id="events" class="container" data-section="true">
     <p class="special">ОСОБЫЕ СОБЫТИЯ</p>
     <h2>Наше расписание</h2>
-    <p class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
-        et dolore magna aliqua. Ut enim ad minim veniam</p>
     <div class="accordionPanel">
         <div class="imgContainer">
             {#each ACCORDION_IMAGES as image, index}
@@ -77,14 +75,6 @@
         letter-spacing: 2px;
         font-weight: 600;
         color: rgba(0, 0, 0, 0.4);
-    }
-
-    .desc {
-        width: 75%;
-        margin-left: auto;
-        margin-right: auto;
-        font-size: 18px;
-        line-height: 1.5;
     }
 
     .accordionPanel {
