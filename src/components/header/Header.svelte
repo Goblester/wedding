@@ -39,7 +39,7 @@
         margin-left: 34px;
         font-size: 28px;
         font-family: 'Caveat', cursive;
-        font-weight: 700;
+        font-weight: 500;
     }
 
     @media(max-width: 769px) {

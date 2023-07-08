@@ -68,7 +68,7 @@
         margin-bottom: 10px;
         line-height: 1.5;
         font-family: 'Caveat', cursive;
-        font-weight: 700;
+        font-weight: 500;
         font-size: 50px;
         color: #000;
     }

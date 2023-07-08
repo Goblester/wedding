@@ -1,31 +1,9 @@
 @font-face {
     font-family: "Caveat";
-    src: url('./Caveat-bold.ttf') format('truetype');
-    font-style: normal;
-    font-weight: 700;
-}
-
-@font-face {
-    font-family: "Caveat";
-    src: url('./Caveat-Regular.ttf') format('truetype');
-    font-style: normal;
-    font-weight: 400;
-}
-
-@font-face {
-    font-family: "Caveat";
     src: url('./Caveat-Medium.ttf') format('truetype');
     font-style: normal;
     font-weight: 500;
 }
-
-@font-face {
-    font-family: "Mulish";
-    src: url('./Mulish-ExtraLight.ttf') format('truetype');
-    font-style: normal;
-    font-weight: 200;
-}
-
 @font-face {
     font-family: "Mulish";
     src: url('./Mulish-Light.ttf') format('truetype');
@@ -39,6 +17,13 @@
     src: url('./Mulish-Regular.ttf') format('truetype');
     font-style: normal;
     font-weight: 400;
+}
+
+@font-face {
+    font-family: "Mulish";
+    src: url('./Mulish-Medium.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 500;
 }
 
 @font-face {
