@@ -50,7 +50,7 @@
                 <span class="dateName">СЕКУНД</span>
             </div>
         </div>
-        <span class="sideText">...до того как мы поженимся!</span>
+        <span class="sideText">...до нашего бракосочетания!</span>
     </div>
 </section>
 
