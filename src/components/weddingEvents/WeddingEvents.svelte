@@ -22,6 +22,13 @@
 
 </script>
 
+
+<svelte:head>
+    {#each ACCORDION_IMAGES as image}
+        <link href={image} rel="preload" />
+    {/each}
+</svelte:head>
+
 <div id="events" class="container" data-section="true">
     <p class="special">ОСОБЫЕ СОБЫТИЯ</p>
     <h2>Наше расписание</h2>
