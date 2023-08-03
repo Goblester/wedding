@@ -1,6 +1,4 @@
 <script>
-
-
     import {onMount} from "svelte";
 
     let currentDate = new Date();
@@ -23,35 +21,43 @@
     })
 </script>
 
+
 <section class="container">
     <h2>День свадьбы<br/>
         4 . Августа . 2023</h2>
     <p class="excitedText">
         Мы очень рады отпраздновать этот особый день в кругу семьи и близких друзей!
     </p>
-    <div class="bottomContainer">
-        <span class="sideText">Всего несколько часов</span>
-
-        <div class="timerContainer">
-            <div class="dateItem">
-                <span class="dateValue">{days < 10 ? `0${days}` : days}</span>
-                <span class="dateName">ДНЕЙ</span>
-            </div>
-            <div class="dateItem">
-                <span class="dateValue">{hours < 10 ? `0${hours}` : hours}</span>
-                <span class="dateName">ЧАСОВ</span>
-            </div>
-            <div class="dateItem">
-                <span class="dateValue">{minutes < 10 ? `0${minutes}` : minutes}</span>
-                <span class="dateName">МИНУТ</span>
-            </div>
-            <div class="dateItem">
-                <span class="dateValue">{seconds < 10 ? `0${seconds}` : seconds}</span>
-                <span class="dateName">СЕКУНД</span>
-            </div>
+    {#if differenceDate <= 0}
+        <div class="bottomContainer">
+            <div class="live">В прямом эфире!</div>
         </div>
-        <span class="sideText">...до нашего бракосочетания!</span>
-    </div>
+        {:else}
+        <div class="bottomContainer">
+            <span class="sideText">Всего несколько часов</span>
+
+            <div class="timerContainer">
+                <div class="dateItem">
+                    <span class="dateValue">{days < 10 ? `0${days}` : days}</span>
+                    <span class="dateName">ДНЕЙ</span>
+                </div>
+                <div class="dateItem">
+                    <span class="dateValue">{hours < 10 ? `0${hours}` : hours}</span>
+                    <span class="dateName">ЧАСОВ</span>
+                </div>
+                <div class="dateItem">
+                    <span class="dateValue">{minutes < 10 ? `0${minutes}` : minutes}</span>
+                    <span class="dateName">МИНУТ</span>
+                </div>
+                <div class="dateItem">
+                    <span class="dateValue">{seconds < 10 ? `0${seconds}` : seconds}</span>
+                    <span class="dateName">СЕКУНД</span>
+                </div>
+            </div>
+            <span class="sideText">...до нашего бракосочетания!</span>
+        </div>
+    {/if}
+
 </section>
 
 <style>
@@ -64,6 +70,14 @@
     }
 
     h2 {
+        color: white;
+    }
+
+    .live {
+        line-height: 1.5;
+        font-family: 'Caveat', cursive;
+        font-weight: 500;
+        font-size: 50px;
         color: white;
     }
 
