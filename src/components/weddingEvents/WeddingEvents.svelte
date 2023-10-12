@@ -1,6 +1,5 @@
 <script>
     import {ACCORDION_IMAGES} from "../../constants";
-    import LocationIcon from "../icons/LocationIcon.svelte";
     import {ACCORDION_DATA} from "../../constants";
     import {slide} from "svelte/transition";
     import {cubicInOut} from 'svelte/easing';
@@ -57,7 +56,6 @@
                         }}>{accItem.time}</button>
                         {#if currentIndex === index}
                             <div class="accordion" transition:slide|global={{duration: 300}}>
-                                <span class="location"><LocationIcon/>{accItem.location}</span>
                                 <p class="eventDesc">{accItem.description}</p>
                             </div>
                         {/if}
@@ -153,14 +151,6 @@
         padding: 0 15px 5px;
         font-size: 16px;
         line-height: 1.7;
-    }
-
-    .location {
-        text-align: left;
-        font-weight: 300;
-        padding: 5px 15px 0;
-        line-height: 2;
-        font-size: 16px;
     }
 
     .accordion {
